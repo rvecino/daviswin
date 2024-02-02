@@ -611,6 +611,11 @@ footer {
   border: 1px solid #103762;
   transition: all ease 0.3s;
 }
+.button-wrapper a button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
 .button-wrapper a:hover {
   background-color: #000;
   border-color: #000;

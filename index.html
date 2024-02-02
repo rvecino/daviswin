@@ -58,34 +58,60 @@
                         <img src="assets/images/cricle-1.png" alt="cricle">
                     </div>
                     <p>Request your <span class="d-inline">free, window and door replacement quote</span> today!</p>
-                    <form action="">
-                        <div class="form-group">
-                            <input type="text" placeholder="First Name*">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Last Name*">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Phone Number*">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Email*">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Zip Code*">
-                        </div>
-                        <div class="form-group">
-                            <select class="form-select">
-                                <option value="">Window and door replacement</option>
-                                <option value="">Window replacement</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Tell us about your project!"></textarea>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="">REQUEST A CONSULTATION</a>
-                            <a href="">CALL: (704) 248-4947</a>
+
+                    <!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
+                    <form
+                        action='https://forms.zohopublic.com/mauriciojaimes/form/NewLandingConsultation/formperma/epxSfg_H45ThBU2-pLlw69powaueHe_lCaHnq2TAMDI/htmlRecords/submit'
+                        name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                        <input type="hidden" name="zf_referrer_name"
+                            value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                        <input type="hidden" name="zf_redirect_url"
+                            value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                        <input type="hidden" name="zc_gad"
+                            value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                        <h2>New Landing Consultation</h2>
+                        <p></p>
+                        <!--Single Line-->
+                        <label>
+                        </label>
+                        <input type="text" name="SingleLine" value="" fieldType=1 maxlength="255"
+                            placeholder="First&#x20;Name" />
+                        <!--Single Line-->
+                        <label>
+                        </label>
+                        <input type="text" name="SingleLine1" value="" fieldType=1 maxlength="255"
+                            placeholder="Last&#x20;Name" />
+                        <!--Number-->
+                        <label>
+                        </label>
+                        <input type="text" name="Number" value="" maxlength="18" placeholder="Phone&#x20;Number" />
+                        <!--Email-->
+                        <label>
+                        </label>
+                        <input type="text" maxlength="255" name="Email" value="" fieldType=9 placeholder="Email" />
+                        <!--Single Line-->
+                        <label>
+                        </label>
+                        <input type="text" name="SingleLine2" value="" fieldType=1 maxlength="255"
+                            placeholder="Zip&#x20;Code" />
+                        <!--Dropdown-->
+                        <label>
+                        </label>
+                        <select name="Dropdown">
+                            <option selected="true" value="-Select-">What service are you looking for&#x3f;</option>
+                            <option value="Window&#x20;and&#x20;Door&#x20;Replacement" selected>Window and Door
+                                Replacement</option>
+                            <option value="Window&#x20;Replacement">Window Replacement</option>
+                            <option value="Third&#x20;Choice">Third Choice</option>
+                        </select>
+                        <!-- <div class="form-group">
+                            <label>
+                                <div>Add content...<br /></div>
+                            </label>
+                        </div> -->
+                        <div class="button-wrapper mt-4">
+                            <a href=""><button type="submit"><em>REQUEST A CONSULTATION</em></button></a>
+                            <a href="tel:CALL:(704)248-4947">CALL: (704) 248-4947</a>
                         </div>
                         <p class="mb-0 please-bottom-text"><span>*Please Note:</span> This offer is applicable only to
                             projects involving a minimum of <br> 4 window
@@ -258,7 +284,7 @@
                 <hr class="border-one">
                 <div class="request-text">Request your <span>free, window and door replacement quote</span> today!</div>
                 <div class="button-wrapper d-flex flex-wrap justify-content-center">
-                    <a href="">CALL: (704) 248-4947</a>
+                    <a href="tel:CALL:(704)248-4947">CALL: (704) 248-4947</a>
                     <a href="">REQUEST A CONSULTATION</a>
                 </div>
             </div>
