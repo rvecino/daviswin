@@ -573,7 +573,17 @@ footer {
   font-size: 14px;
   transition: all ease 0.3s;
   box-shadow: none !important;
+  background-color: #fff;
 }
+/* 
+.hero-form select option:first-child {
+  color: #acacac;
+
+}
+.hero-form select option::placeholder {
+  color: #acacac;
+
+} */
 .hero-form textarea:focus,
 .hero-form input:focus,
 .hero-form select:focus {
