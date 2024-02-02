@@ -635,13 +635,13 @@ footer {
 
 .brand-wrapper {
   gap: 30px;
-  margin-top: -100px;
+  margin-top: -60px;
   padding-left: 25px;
   padding-bottom: 21px;
 }
 @media (max-width: 991px) {
   .brand-wrapper {
-    margin-top: -80px;
+    margin-top: -30px;
   }
 }
 @media (max-width: 767px) {
@@ -656,11 +656,11 @@ footer {
 .experience-section {
   position: relative;
   padding-bottom: 45px;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 @media (max-width: 991px) {
   .experience-section {
-    padding-top: 60px;
+    padding-top: 40px;
   }
 }
 @media (max-width: 767px) {
