@@ -313,7 +313,7 @@ h2 {
 }
 @media (max-width: 767px) {
   .middle-content div.middle-content-right {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 
@@ -331,10 +331,33 @@ h2 {
 }
 @media (max-width: 991px) {
   .header-btn a {
-    font-size: 12px;
-    padding: 7px 10px 10px;
-  }
+    font-size: 14px;
+    padding: 12px 15px 15px;
 }
+.header {
+  padding-block: 12px;
+}
+.header .container {
+  max-width: 100%;
+}
+}
+@media (max-width: 399px) {
+  .header {
+    padding-block: 15px;
+  }
+  .header-btn a {
+    font-size: 12px;
+    padding: 9px 10px 12px;
+}
+.middle-content div.middle-content-right {
+  font-size: 11px;
+}
+.footer-content-wrapper {
+  font-size: 13px !important;
+}
+}
+
+
 .header-btn a:hover {
   background-color: #000;
 }
@@ -357,14 +380,11 @@ footer {
 }
 @media (max-width: 991px) {
   .footer-content-wrapper {
-    font-size: 12px;
+    font-size: 14px;
+    font-family: "Loew-Regular";
   }
 }
-@media (max-width: 767px) {
-  .footer-content-wrapper {
-    font-size: 10px;
-  }
-}
+
 
 .mobile-content {
   font-size: 12px;
