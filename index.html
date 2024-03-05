@@ -117,21 +117,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             replacements.</p>
                     </form>
 
-                    <script>
-                        document.getElementById('form').addEventListener('submit', function (event) {
-                            var formValid = true;
-                            var inputs = this.querySelectorAll('input');
-                            for (var i = 0; i < inputs.length; i++) {
-                                if (!inputs[i].value.trim()) {
-                                    formValid = false;
-                                    inputs[i].parentNode.classList.add('hasError');
-                                } else {
+                       <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            document.getElementById('form').addEventListener('submit', function (event) {
+                                // Remove error class from all input fields
+                                var firstName = document.querySelector('#firstName')
+                                var lastName = document.querySelector('#lastName')
+                                var international_PhoneNumber_countrycode = document.querySelector('#international_PhoneNumber_countrycode')
+                                var emailAddress = document.querySelector('#emailAddress')
+                                var zipCode = document.querySelector('#zipCode')
+                                var inputs = this.querySelectorAll('input');
+                                
+                                for (var i = 0; i < inputs.length; i++) {
                                     inputs[i].parentNode.classList.remove('hasError');
                                 }
-                            }
-                            if (!formValid) {
-                                event.preventDefault();
-                            }
+
+                                // Check for empty inputs
+                                var formValid = true;
+                                for (var i = 0; i < inputs.length; i++) {
+                                    if (!inputs[i].value.trim()) {
+                                        formValid = false;
+                                        inputs[i].parentNode.classList.add('hasError');
+                                    }
+                                }
+                                if (firstName.value
+                                    && lastName.value
+                                    && international_PhoneNumber_countrycode.value
+                                    && emailAddress.value
+                                    && zipCode.value) {
+                                    var formValid = true
+                                } else {
+                                    var formValid = false
+
+                                }
+
+                                // Prevent form submission if inputs are empty
+                                if (!formValid) {
+                                    event.preventDefault();
+                                    console.log('Form submission prevented due to empty inputs');
+                                }
+                            });
                         });
                     </script>
                 </div>
