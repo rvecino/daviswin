@@ -666,7 +666,7 @@ footer {
 
 .brand-wrapper {
   gap: 30px;
-  margin-top: -115px;
+  margin-top: -70px;
   padding-left: 25px;
   padding-bottom: 21px;
 }
@@ -1549,4 +1549,51 @@ footer {
   opacity: 1;
   max-width: 855px;
   margin-inline: auto;
+}
+
+.form-group {
+  position: relative;
+}
+.error {
+  letter-spacing: .5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.3;
+  padding: 5px 12px;
+  background-color: #E1574E;
+  font-size: 14px;
+  color: white;
+  position: relative;
+  z-index: 11;
+  display: none;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translate(-10px, -50%);
+  min-width: max-content;
+}
+
+.error::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #E1574E;
+  left: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@media (max-width:757px) {
+  .error {
+    transform: translate(0);
+    background-color: transparent;
+    color: #E1574E;
+    padding-inline-start: 0;
+  }
+  .error::before {
+    display: none;
+  }
+}
+.form-group.hasError .error {
+  display: inline-block;
 }
