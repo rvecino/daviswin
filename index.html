@@ -89,14 +89,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <!--Number-->
                         <div class="form-group">
-                            <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneformat="1" iscountrycodeenabled="false" maxlength="20" value="" fieldtype="11" id="international_PhoneNumber_countrycode"
+                            <input type="tel" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneformat="1" iscountrycodeenabled="false" maxlength="20" value="" fieldtype="11" id="international_PhoneNumber_countrycode"
                                 placeholder="Phone&#x20;Number" />
-                                <span class="error">Phone Number* is required</span>
+                            <span class="error">Phone Number* is required</span>
                         </div>
                         <!--Email-->
 
                         <div class="form-group">
-                            <input type="text" maxlength="255" name="Email" value="" fieldType=9 placeholder="Email" id="emailAddress" />
+                            <input type="email" maxlength="255" name="Email" value="" fieldType=9 placeholder="Email" id="emailAddress" />
                             <span class="error">Email Address* is required</span>
                         </div>
                         <!--Single Line-->
@@ -117,8 +117,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             replacements.</p>
                     </form>
 
-                       <script>
+                    <script>
                         document.addEventListener('DOMContentLoaded', function () {
+                            var inputs = document.querySelectorAll('#form input');
+                            inputs.forEach(function (input) {
+                                input.addEventListener('input', function () {
+                                    var parent = this.parentNode;
+                                    if (this.value.trim()) {
+                                        parent.classList.remove('hasError');
+                                    } else {
+                                        parent.classList.add('hasError');
+                                    }
+                                });
+                            });
                             document.getElementById('form').addEventListener('submit', function (event) {
                                 // Remove error class from all input fields
                                 var firstName = document.querySelector('#firstName')
@@ -127,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 var emailAddress = document.querySelector('#emailAddress')
                                 var zipCode = document.querySelector('#zipCode')
                                 var inputs = this.querySelectorAll('input');
-                                
+
                                 for (var i = 0; i < inputs.length; i++) {
                                     inputs[i].parentNode.classList.remove('hasError');
                                 }
